@@ -1,3 +1,13 @@
-theme: minima
+
 title: "Practical AI"
 description: "Building production RAG systems, document intelligence, and AI solutions."
+url: "https://elaine2233.github.io/floatingroam.github.io"
+
+theme: minima
+
+minima:
+  date_format: "%Y-%m-%d"
+  
+minima:
+  social_links:
+    linkedin: linkedin.com/in/yining-shi-25194b14b
