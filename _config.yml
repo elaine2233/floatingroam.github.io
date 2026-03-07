@@ -4,8 +4,7 @@ description: "Building production RAG systems, document intelligence, and AI sol
 url: "https://elaine2233.github.io/floatingroam.github.io"
 
 header_pages:
-  - about.md
-  - rag-evaluation-en.html
+  - rag-evaluation-en.md
   
 theme: minima
 
