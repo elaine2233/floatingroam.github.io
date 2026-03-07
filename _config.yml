@@ -1,17 +1,20 @@
-
 title: "Practical AI"
 description: "Building production RAG systems, document intelligence, and AI solutions."
 url: "https://elaine2233.github.io"
+baseurl: "/floatingroam.github.io"
 
+# Header pages – only include files that actually exist in the root.
+# Since you don't have about.md or rag-evaluation-en.html, remove this line
+# or set it to an empty list. If you later add an about.md, you can list it here.
 header_pages:
-  - about.md
-  - rag-evaluation-en.html
-  
+  # - about.md
+  # - rag-evaluation-en.html
+
 theme: minima
 
+# Minima theme settings (merged into one section)
 minima:
   date_format: "%Y-%m-%d"
-  
-minima:
   social_links:
-    linkedin: linkedin.com/in/yining-shi-25194b14b
+    - platform: linkedin
+      user_url: "https://www.linkedin.com/in/yining-shi-25194b14b"
