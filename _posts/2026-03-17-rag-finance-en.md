@@ -180,7 +180,7 @@ Once the system goes live, processing large volumes of new documents daily makes
 
 A practical approach: **use unsupervised evaluation to score each record's "confidence level," send low-scoring ones for human review**.
 
-Specifically, you can have another LLM act as a "judge," scoring AI outputs across dimensions like relevance, faithfulness, and completeness. Records below the threshold are flagged as "low confidence" and sent for human review. I detailed this approach in my previous post on [building an evaluation framework]({% post_url 2026-03-07-rag-evaluation-en %})—the core idea is: you can automatically identify "potentially problematic" outputs without ground truth.
+Specifically, you can have another LLM act as a "judge," scoring AI outputs across dimensions like relevance, faithfulness, and completeness. Records below the threshold are flagged as "low confidence" and sent for human review. I detailed this approach in my previous post on [building an evaluation framework]({{ site.baseurl }}{% post_url 2026-03-07-rag-evaluation-en %})—the core idea is: you can automatically identify "potentially problematic" outputs without ground truth.
 
 Result: Humans review only ~10% of data, catching 90%+ of errors.
 
@@ -222,7 +222,7 @@ If you're working on RAG in finance or have similar experience, let's connect. T
 ---
 
 **Series Navigation**:
-- Previous: [RAG Evaluation: Building a Reliable Automated Testing System]({% post_url 2026-03-07-rag-evaluation-en %})
+- Previous: [RAG Evaluation: Building a Reliable Automated Testing System]({{ site.baseurl }}{% post_url 2026-03-07-rag-evaluation-en %})
 - This: RAG in Finance: When "Close Enough" Is Not Enough
 
 ---
