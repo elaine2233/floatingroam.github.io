@@ -2,7 +2,11 @@
 layout: post
 title: "RAG Evaluation: Building a Reliable Automated Testing System"
 date: 2026-03-07
+author: floating roam
 categories: [tech, RAG]
+tags: [RAG, evaluation, LLM, testing, automation]
+excerpt: "A practical guide to building RAG evaluation systems—from gut-feel debugging to data-driven improvement."
+version: 3
 ---
 
 # RAG Evaluation: Building a Reliable Automated Testing System
@@ -49,6 +53,16 @@ ESG extraction and contract extraction are completely different—ESG looks for 
 Our approach: **Build separate test sets per scenario.**
 
 The process is straightforward:
+
+```mermaid
+graph LR
+    A[Real Documents] --> B[AI Generate Q&A]
+    B --> C[Human Review & Correct]
+    C --> D[Test Set Accumulation]
+    D --> E[Evaluation Run]
+    E --> F[Metrics Output]
+```
+
 1. Use AI to generate questions and answers (based on real documents)
 2. Have humans review and correct them
 3. Accumulate 200–1000 samples per scenario
@@ -61,7 +75,22 @@ For retrieval, we only use recall. Missing key content costs more than retrievin
 
 For generation, we use LLM‑as‑judge. Feed the question, AI answer, and ground truth to a judge model, get a score from 0–100. We set a threshold at 90—anything below triggers an alert.
 
-We tried existing tools like RAGAs, DeepEval, TruLens. RAGAs has comprehensive metrics (faithfulness, answer relevancy, context recall). But we found them either too heavy (need full deployment), too black‑box—the evaluation process is opaque; you don’t know how the score is derived—or too expensive. So we built a lightweight in‑house framework, a few hundred lines of code, flexible and controllable.
+We tried existing tools like RAGAs, DeepEval, TruLens. RAGAs has comprehensive metrics (faithfulness, answer relevancy, context recall). But we found them either too heavy (need full deployment), too black‑box—the evaluation process is opaque; you don't know how the score is derived—or too expensive. So we built a lightweight in‑house framework, a few hundred lines of code, flexible and controllable.
+
+```python
+def evaluate_rag(question, answer, ground_truth, context):
+    score = llm_judge(
+        prompt=f"""
+        Question: {question}
+        Context: {context}
+        AI Answer: {answer}
+        Ground Truth: {ground_truth}
+        
+        Rate the answer quality (0-100):
+        """
+    )
+    return score
+```
 
 ### 2.2 Without Ground Truth: Flagging “Suspicious” Data
 
@@ -130,7 +159,13 @@ But evaluation itself needs iteration—metrics change with business needs, thre
 
 Today, the system’s accuracy is stable above 95%. Client complaints are now occasional queries. Looking back, the decision to “build evaluation first” was the project’s turning point.
 
-If you’re building RAG evaluation, let’s connect. This field has no standard answers yet—we’re all exploring.
+If you're building RAG evaluation, let's connect. This field has no standard answers yet—we're all exploring.
+
+---
+
+**Series Navigation**:
+- This: RAG Evaluation: Building a Reliable Automated Testing System
+- Next: [RAG in Finance: When 'Close Enough' Is Not Enough]({% post_url 2026-03-17-rag-finance-en %})
 
 ---
 
