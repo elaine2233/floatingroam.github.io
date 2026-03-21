@@ -165,7 +165,7 @@ If you're building RAG evaluation, let's connect. This field has no standard ans
 
 **Series Navigation**:
 - This: RAG Evaluation: Building a Reliable Automated Testing System
-- Next: [RAG in Finance: When 'Close Enough' Is Not Enough]({% post_url 2026-03-17-rag-finance-en %})
+- Next: [RAG in Finance: When 'Close Enough' Is Not Enough]({{ site.baseurl }}{% post_url 2026-03-17-rag-finance-en %})
 
 ---
 
