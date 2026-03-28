@@ -1,0 +1,29 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="{{ 'feed.xml' | absolute_url }}">
+            <svg class="svg-icon orange">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg>
+            <span>Subscribe</span>
+          </a>
+        </p>
+        {%- if site.author -%}
+          <p class="footer-heading">{{ site.author | escape }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+        {% include visitor-counter.html %}
+      </div>
+    </div>
+
+  </div>
+
+</footer>
