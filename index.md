@@ -26,22 +26,22 @@ title: Practical AI
 
   .hero {
     text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 50px;
+    padding: 35px 20px;
+    margin-bottom: 40px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 16px;
+    border-radius: 12px;
     color: white;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
-    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+    margin: 0 0 8px 0;
     font-weight: 700;
   }
 
   .hero p {
-    font-size: 1.1rem;
-    margin: 0 0 25px 0;
+    font-size: 0.95rem;
+    margin: 0 0 18px 0;
     opacity: 0.9;
   }
 
@@ -120,6 +120,48 @@ title: Practical AI
     color: var(--text-muted);
     margin: 0;
   }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .pagination a,
+  .pagination span {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .pagination a {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+  }
+
+  .pagination a:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+
+  .pagination .current {
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+  }
+
+  .pagination .disabled {
+    color: var(--text-muted);
+    cursor: not-allowed;
+  }
 </style>
 
 <div class="home-wrapper">
@@ -139,7 +181,7 @@ title: Practical AI
   <div class="posts-section">
     <h2>Articles</h2>
     <ul class="post-list">
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
       <li class="post-item">
         <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
         <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
@@ -149,5 +191,31 @@ title: Practical AI
       </li>
       {% endfor %}
     </ul>
+
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+      {% else %}
+        <span class="disabled">&laquo; Prev</span>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="current">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="{{ '/' | relative_url }}">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+      {% else %}
+        <span class="disabled">Next &raquo;</span>
+      {% endif %}
+    </div>
+    {% endif %}
   </div>
 </div>
