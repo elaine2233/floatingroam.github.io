@@ -181,7 +181,8 @@ title: Practical AI
   <div class="posts-section">
     <h2>Articles</h2>
     <ul class="post-list">
-      {% for post in paginator.posts %}
+      {% assign posts = paginator.posts | default: site.posts %}
+      {% for post in posts %}
       <li class="post-item">
         <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
         <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
