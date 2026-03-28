@@ -7,6 +7,9 @@ header_pages:
 
 theme: minima
 
+sass:
+  style: :compressed
+
 minima:
   date_format: "%Y-%m-%d"
   social_links:
