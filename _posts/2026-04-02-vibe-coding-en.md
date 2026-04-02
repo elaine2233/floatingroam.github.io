@@ -12,7 +12,7 @@ version: 11
 
 # Vibe Coding: When Your Pain Point Becomes Your Product
 
-![Xun]({{ site.baseurl }}/assets/posts/vibe-coding/2026-04-02-vibe-coding-xun.jpeg)
+<img src="{{ site.baseurl }}/assets/posts/vibe-coding/2026-04-02-vibe-coding-xun.jpeg" alt="Xun" width="400">
 
 The xun has a unique sound—deep, distant, like wind from ancient times.
 
