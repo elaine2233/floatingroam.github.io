@@ -1,18 +1,18 @@
 ---
 layout: post
 title: "Vibe Coding: When Your Pain Point Becomes Your Product"
-date: 2026-03-22
+date: 2026-04-02
 author: floating roam
 categories: [tech, AI, personal growth]
 tags: [Vibe Coding, AI development, product manager, indie dev]
 excerpt: "How I built a xun score converter using AI Studio, Cursor, and Figma—and learned that the right tool sequence matters more than coding skills."
-image: /_posts/2026-03-22-vibe-coding-product.png
+image: /assets/posts/vibe-coding/2026-04-02-vibe-coding-product.png
 version: 11
 ---
 
 # Vibe Coding: When Your Pain Point Becomes Your Product
 
-![Xun](2026-04-02-vibe-coding-xun.jpeg)
+![Xun]({{ site.baseurl }}/assets/posts/vibe-coding/2026-04-02-vibe-coding-xun.jpeg)
 
 The xun has a unique sound—deep, distant, like wind from ancient times.
 
@@ -90,7 +90,7 @@ Same description—"clean modern style"—but the results were beautiful. Comfor
 
 Figma needs no technique. Describe clearly, and it works. For aesthetics, nothing else comes close.
 
-![Figma design mockup](2026-04-02-vibe-coding-figma_sample.png)
+![Figma design mockup]({{ site.baseurl }}/assets/posts/vibe-coding/2026-04-02-vibe-coding-figma_sample.png)
 
 But it's a design tool, nothing more. No backend, no databases, no user authentication. Those, I still had to build myself. Fair enough—that's not what it's for.
 
@@ -120,7 +120,7 @@ I've never been a product manager. But building this, I started thinking like on
 
 The tool is still in development, but the core works.
 
-![Product interface](2026-04-02-vibe-coding-product.png)
+![Product interface]({{ site.baseurl }}/assets/posts/vibe-coding/2026-04-02-vibe-coding-product.png)
 
 I input songs I've wanted to play—"A Laugh in the Sea," "Daughter's Love," "Big Fish"—watched the fingering charts appear, picked up my xun, and played note by note.
 
