@@ -18,6 +18,15 @@
   </style>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
-    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('pre code.language-mermaid').forEach(function(block) {
+        var pre = block.parentElement;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = block.textContent;
+        pre.parentElement.replaceChild(div, pre);
+      });
+      mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    });
   </script>
 </head>
