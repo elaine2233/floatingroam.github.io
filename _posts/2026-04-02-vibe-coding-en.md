@@ -164,4 +164,11 @@ AI is the tool. You're the product owner.
 
 ---
 
+**Series Navigation**:
+- Previous: [RAG in Finance: When "Close Enough" Is Not Enough]({{ site.baseurl }}{% post_url 2026-03-17-rag-finance-en %})
+- This: Vibe Coding: When Your Pain Point Becomes Your Product
+- Next: [Domain Model Fine-tuning: From General LLM to Domain Expert]({{ site.baseurl }}{% post_url 2026-04-16-domain-fine-tuning-en %})
+
+---
+
 *Written mid-development, still iterating. Happy to discuss. Looking forward to launch.*
