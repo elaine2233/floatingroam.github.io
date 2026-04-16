@@ -340,7 +340,7 @@ The principle of technology selection: **Start with the simplest solution, upgra
 ---
 
 **Series Navigation**:
-- Previous: [Vibe Coding—When Your Pain Point Becomes Your Product]({% post_url 2026-04-02-vibe-coding-en %})
+- Previous: [Vibe Coding—When Your Pain Point Becomes Your Product]({{ site.baseurl }}{% post_url 2026-04-02-vibe-coding-en %})
 - This Article: Domain Model Fine-tuning: From General LLM to Domain Expert
 
 ---
