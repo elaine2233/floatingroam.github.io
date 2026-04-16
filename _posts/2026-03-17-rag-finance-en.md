@@ -224,6 +224,7 @@ If you're working on RAG in finance or have similar experience, let's connect. T
 **Series Navigation**:
 - Previous: [RAG Evaluation: Building a Reliable Automated Testing System]({{ site.baseurl }}{% post_url 2026-03-07-rag-evaluation-en %})
 - This: RAG in Finance: When "Close Enough" Is Not Enough
+- Next: [Vibe Coding: When Your Pain Point Becomes Your Product]({{ site.baseurl }}{% post_url 2026-04-02-vibe-coding-en %})
 
 ---
 
