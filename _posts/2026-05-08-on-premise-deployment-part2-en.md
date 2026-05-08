@@ -286,7 +286,7 @@ Before going live with on-premise deployment, verify the following:
 ---
 
 **Series Navigation**:
-- Previous: [On-Premise Deployment (Part 1): Who Needs It? How to Choose?]({{ site.baseurl }}{% post_url 2026-04-18-on-premise-deployment-part1-en %})
+- Previous: [On-Premise Deployment (Part 1): Who Needs It? How to Choose?]({{ site.baseurl }}{% post_url 2026-04-27-on-premise-deployment-part1-en %})
 - This: On-Premise Deployment (Part 2): Pitfalls in Practice
 
 ---
