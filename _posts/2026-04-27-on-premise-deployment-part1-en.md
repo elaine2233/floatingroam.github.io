@@ -208,7 +208,7 @@ Selection is just the first step. The next post will cover the pitfalls in actua
 **Series Navigation**:
 - Previous: [Domain Fine-Tuning: From General LLMs to Domain Experts]({{ site.baseurl }}{% post_url 2026-04-16-domain-fine-tuning-en %})
 - This: On-Premise Deployment (Part 1): Who Needs It? How to Choose?
-
+- Next: [On-Premise Deployment (Part 2): Pitfalls in Practice]({{ site.baseurl }}{% post_url 2026-05-08-on-premise-deployment-part2-en %})
 
 ---
 
